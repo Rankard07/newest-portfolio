@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+/* import { Button } from "@/components/ui/button"
 
 export function App() {
   return (
@@ -19,3 +19,14 @@ export function App() {
 }
 
 export default App
+ */
+
+import Navbar from "@/components/created/Navbar"
+
+export default function App() {
+  return (
+    <div>
+      <Navbar />
+    </div>
+  )
+}
