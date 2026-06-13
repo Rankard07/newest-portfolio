@@ -21,7 +21,7 @@ export function App() {
 export default App
  */
 
-import Navbar from "@/components/created/Navbar"
+import Navbar from "@/components/created/Navbar/Navbar"
 
 export default function App() {
   return (

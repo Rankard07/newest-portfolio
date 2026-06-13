@@ -11,11 +11,11 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../ui/dropdown-menu";
-import { Button } from "../ui/button";
+} from "../../ui/dropdown-menu";
+import { Button } from "../../ui/button";
 
 import { MobileHamburger } from "./MobileHamburger";
-import { AnimatedThemeToggler } from "../animated-theme-toggler";
+import { AnimatedThemeToggler } from "../../animated-theme-toggler";
 import { GlowingAnimatedBG } from "./GlowingAnimatedBG";
 import { ConicBorderWrapper } from "./ConicBorderWrapper";
 
@@ -414,7 +414,7 @@ export default function Navbar({
                 {/* END - Right Section - Desktop: CV Download + Theme Toggle */}
 
                 {/* Mobile Controls - Theme Toggle + Hamburger Only */}
-                <div className="md:hidden flex items-center gap-1 shrink-0">
+                <div className="md:hidden flex items-center gap-5 shrink-0">
                   <AnimatedThemeToggler />
                   <MobileHamburger />
                 </div>

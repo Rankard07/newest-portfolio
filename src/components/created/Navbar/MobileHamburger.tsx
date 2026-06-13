@@ -3,21 +3,16 @@ import { Menu, X, Mail, ExternalLink, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { FaLinkedinIn } from "react-icons/fa";
-import { type PageConfig } from "./navbar-page.config";
+// import { type PageConfig } from "./navbar-page.config";
 import { ConicBorderWrapper } from "./ConicBorderWrapper";
 import { GlowingAnimatedBG } from "./GlowingAnimatedBG";
+import {
+  DEFAULT_CONTACT_ITEMS,
+  type ContactItem,
+} from "./navbar-page.config";
 
 // Mapping ID Halaman ke Icon yang sesuai untuk efek floating di Navbar
-export interface ContactItem {
-  label: string;
-  href: string;
-}
 
-export const DEFAULT_CONTACT_ITEMS: ContactItem[] = [
-  { label: "Email", href: "mailto:email@example.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "GitHub", href: "https://github.com" },
-];
 
 // Icon mapping by label (easy to extend)
 const CONTACT_ICON_MAP: Record<string, React.ReactNode> = {
@@ -37,30 +32,34 @@ export function MobileHamburger({
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden relative"
-          onClick={() => setIsOpen(true)}
-          aria-label={isOpen ? "Close menu" : "Open menu"}
-        >
-          <div className="relative h-6 w-6">
-            <Menu
-              className={`absolute inset-0 h-6 w-6 transition-all duration-300 ease-in-out ${
-                isOpen ? "rotate-90 opacity-0 scale-50" : "rotate-0 opacity-100 scale-100"
-              }`}
-            />
-            <X
-              className={`absolute inset-0 h-6 w-6 transition-all duration-300 ease-in-out ${
-                isOpen ? "rotate-0 opacity-100 scale-100" : "-rotate-90 opacity-0 scale-50"
-              }`}
-            />
-          </div>
-        </Button>
-      </SheetTrigger>
+      <SheetTrigger
+        render={
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden relative flex items-center justify-center p-0"
+            onClick={() => setIsOpen(true)}
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+          >
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="relative h-6 w-6">
+                <Menu
+                  className={`absolute inset-0 size-6 transition-all duration-300 ease-in-out ${
+                    isOpen ? "rotate-90 opacity-0 scale-50" : "rotate-0 opacity-100 scale-100"
+                  }`}
+                />
+                <X
+                  className={`absolute inset-0 size-6 transition-all duration-300 ease-in-out ${
+                    isOpen ? "rotate-0 opacity-100 scale-100" : "-rotate-90 opacity-0 scale-50"
+                  }`}
+                />
+              </div>
+            </div>
+          </Button>
+        }
+      />
 
-      <SheetContent side="top" className="w-full max-w-md mx-auto">
+      <SheetContent side="top" className="w-full max-w-md mx-auto rounded-b-3xl border-t-0">
         <SheetHeader>
           <SheetTitle>Menu</SheetTitle>
         </SheetHeader>
