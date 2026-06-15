@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import SkillsSection from "./SkillsSection";
-import TechstackSection from "./TechstackSection";
+import TechstackSection from "./TechStacksSection";
 import SectionDivider from "./SectionDivider";
 
 export default function Home() {
