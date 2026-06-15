@@ -18,6 +18,41 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
+        // DaisyUI Variants
+        daisyPrimary:
+          "bg-[#570af2] text-white hover:bg-[#4506cb] border-transparent",
+        daisySecondary:
+          "bg-[#f000b8] text-white hover:bg-[#c40096] border-transparent",
+        daisyAccent:
+          "bg-[#37cdbe] text-[#1f2937] hover:bg-[#2aa79b] border-transparent",
+        daisySuccess:
+          "bg-[#00a96e] text-white hover:bg-[#008c5b] border-transparent shadow-sm",
+        daisyWarning:
+          "bg-[#ffbe00] text-[#1f2937] hover:bg-[#e6ab00] border-transparent",
+        daisyInfo:
+          "bg-[#00b5ff] text-white hover:bg-[#0096d6] border-transparent",
+        daisyError:
+          "bg-[#ff5861] text-white hover:bg-[#e64f57] border-transparent",
+        daisyGhost:
+          "hover:bg-current/10 bg-transparent text-current border-transparent",
+        "daisy-outline-success":
+          "border-[#00a96e] text-[#00a96e] bg-transparent hover:bg-[#00a96e] hover:text-white border-2",
+        "daisy-outline-warning":
+          "border-[#ffbe00] text-[#ffbe00] bg-transparent hover:bg-[#ffbe00] hover:text-white border-2",
+        "daisy-outline-info":
+          "border-[#00b5ff] text-[#00b5ff] bg-transparent hover:bg-[#00b5ff] hover:text-white border-2",
+        "daisy-outline-error":
+          "border-[#ff5861] text-[#ff5861] bg-transparent hover:bg-[#ff5861] hover:text-white border-2",
+        customDanger:
+          "bg-red-600 text-white hover:bg-red-700 border-none shadow-md",
+        customSuccess:
+          "bg-green-600 text-white hover:bg-green-700 border-none shadow-md",
+        customWarning:
+          "bg-yellow-600 text-white hover:bg-yellow-700 border-none shadow-md",
+        customInfo:
+          "bg-blue-600 text-white hover:bg-blue-700 border-none shadow-md",
+        customSpecial:
+          "bg-purple-600 text-white hover:bg-purple-700 border-none shadow-md",
       },
       size: {
         default:
