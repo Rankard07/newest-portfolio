@@ -1,22 +1,5 @@
 import { motion } from "motion/react";
-
-const SKILLS_DATA = [
-  {
-    category: "Frontend Development",
-    skills: ["React.js", "TypeScript", "Tailwind CSS", "Next.js", "Redux Toolkit", "HTML5 & CSS3"],
-    gradient: "from-blue-500 to-indigo-500"
-  },
-  {
-    category: "Backend & Systems",
-    skills: ["Node.js", "Express.js", "PostgreSQL", "MongoDB", "RESTful APIs", "GraphQL"],
-    gradient: "from-emerald-500 to-teal-500"
-  },
-  {
-    category: "Tools & Workflow",
-    skills: ["Git & GitHub", "Docker", "VS Code", "Vite", "ESLint & Prettier", "Framer Motion"],
-    gradient: "from-purple-500 to-pink-500"
-  }
-];
+import { SKILLS_DATA } from "@/config/HomeConfig";
 
 export default function SkillsSection() {
   return (

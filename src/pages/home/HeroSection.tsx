@@ -3,10 +3,9 @@ import { motion } from "motion/react";
 // Shadcn
 import { Button } from "@/components/ui/button";
 // Icon
-import { Terminal, Atom, Database, Cpu, Mail, ChevronsRight } from "lucide-react";
-import { FaGithub, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { Terminal, Atom, Database, Cpu, ChevronsRight } from "lucide-react";
 // Created - Configuration
-import { ABOUT_CONTENT, SOCIAL_ITEMS, type SocialLinkItem } from "@/config/HomeConfig";
+import { ABOUT_CONTENT, SOCIAL_ITEMS, SOCIAL_ICON_MAP, type SocialLinkItem } from "@/config/HomeConfig";
 
 interface FloatingCardProps {
   title: string;
@@ -17,14 +16,6 @@ interface FloatingCardProps {
   duration?: number;
   yOffset?: number;
 }
-
-const SOCIAL_ICON_MAP: Record<SocialLinkItem['platform'], React.ElementType> = {
-  github: FaGithub,
-  linkedin: FaLinkedin,
-  email: Mail,
-  instagram: FaInstagram,
-  twitter: FaTwitter,
-};
 
 function FloatingCard({ title, subtext, icon, className, delay = 1.3, duration = 3.5, yOffset = 8 }: FloatingCardProps) {
   return (
@@ -64,7 +55,7 @@ function FloatingCard({ title, subtext, icon, className, delay = 1.3, duration =
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 py-12 md:py-20 gap-12 min-h-[60vh] bg-purple-600">
+    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 py-4 md:py-6 gap-12 min-h-[60vh] bg-purple-600">
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl -z-10" />
@@ -126,7 +117,7 @@ export default function HeroSection() {
         </div>
 
         {/* Social Media Links */}
-        <div className="flex items-center gap-5 pt-2">
+        <div className="flex flex-wrap items-center gap-5 pt-2">
           {SOCIAL_ITEMS.map((item) => {
             const Icon = SOCIAL_ICON_MAP[item.platform as SocialLinkItem['platform']];
             return (
@@ -145,7 +136,7 @@ export default function HeroSection() {
                 className="text-muted-foreground hover:text-primary transition-colors duration-200 bg-muted p-4 border-2 border-transparent rounded-lg cursor-pointer"
                 title={item.platform}
               >
-                {Icon && <Icon size={25} />}
+                {Icon && <Icon size={22} />}
               </motion.a>
             );
           })}

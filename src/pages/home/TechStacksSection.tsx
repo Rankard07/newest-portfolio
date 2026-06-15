@@ -1,15 +1,8 @@
 import { motion } from "motion/react";
 
-export default function TechstackSection() {
-  const techLogoList = [
-    { name: "React", level: "Advanced" },
-    { name: "TypeScript", level: "Intermediate" },
-    { name: "Node.js", level: "Intermediate" },
-    { name: "TailwindCSS", level: "Advanced" },
-    { name: "Next.js", level: "Intermediate" },
-    { name: "PostgreSQL", level: "Intermediate" },
-  ];
+import { TECH_STACK_DATA } from "@/config/HomeConfig";
 
+export default function TechstackSection() {
   return (
     <section className="py-6 space-y-8">
       <div className="text-center space-y-2">
@@ -20,11 +13,11 @@ export default function TechstackSection() {
       </div>
 
       <div className="flex flex-wrap items-center justify-center gap-6 max-w-4xl mx-auto">
-        {techLogoList.map((tech) => (
+        {TECH_STACK_DATA.map((tech) => (
           <motion.div
             whileHover={{ scale: 1.05 }}
             key={tech.name}
-            className="px-6 py-4 rounded-xl bg-card border border-border/50 shadow-sm flex flex-col items-center justify-center min-w-36 text-center gap-1 hover:border-primary/30 transition-all duration-300"
+            className="px-6 py-4 rounded-lg bg-card border border-border/50 shadow-sm flex flex-col items-center justify-center min-w-36 text-center gap-1 hover:border-primary/30 transition-all duration-300"
           >
             <span className="font-bold text-sm text-foreground">{tech.name}</span>
             <span className="text-[10px] uppercase font-mono tracking-wider text-primary font-semibold">
