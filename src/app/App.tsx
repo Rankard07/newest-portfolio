@@ -56,16 +56,21 @@ export default function App() {
         )} */}
 
         {/* Navbar - Hidden on Other page */}
-        {page !== "other" && (
+        {/* {page !== "other" && (
           <Navbar
             activePage={page}
             onPageChange={handlePageChange}
             className="w-full"
           />
-        )}
+        )} */}
+        <Navbar
+            activePage={page}
+            onPageChange={handlePageChange}
+            className="w-full"
+          />
         
         {/* Page Content with Entry Animation */}
-        <div className="flex-1 bg-green-400">
+        <div className="flex-1 ">
           {page === "home" && <Home />}
           {page === "project" && (
             <div className="flex items-center justify-center min-h-[60vh] text-muted-foreground font-mono text-sm">

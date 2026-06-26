@@ -12,6 +12,18 @@ export interface SocialLinkItem {
   url: string;
 }
 
+export interface SkillItem {
+  name: string;
+  percentage: number;
+}
+
+export interface SkillCategory {
+  category: string;
+  gradient: string;
+  accentColor: string;
+  skills: SkillItem[];
+}
+
 //-----------------------------------------------
 // END - TYPES & INTERFACES
 //-----------------------------------------------
@@ -29,7 +41,7 @@ export const SOCIAL_ICON_MAP: Record<SocialLinkItem['platform'], React.ElementTy
 export const ABOUT_CONTENT = {
   title: "const = Developer ;",
   tagline: "// Full Stack Developer & UI/UX Designer",
-  paragraph: "",
+  paragraph: "Full-Stack Web Development graduate specialising in Frontend Engineering and UI/UX Design. Skilled in building interfaces with React.js, TypeScript, Tailwind CSS, and integrating with Laravel backends via Inertia.js.\n\nI explore Figma for design, Framer for web experiments, and Blender for 3D basics. I'm committed to learning, adapting to new tech — including AI tools — and balancing functionality with strong visual design.",
   primaryButtonText: "Get In Touch",
   secondaryButtonText: "View Projects",
   
@@ -51,24 +63,54 @@ export const SOCIAL_ITEMS: readonly SocialLinkItem[] = [
   { platform: "twitter", url: "#"}
 ] as const;
 
-// 4. Data Core Skills (Dipindahkan dari SkillsSection & dikelompokkan ulang dengan rapi)
-export const SKILLS_DATA = [
+// 4. Data Core Skills dengan Persentase
+// Konversi tingkat keahlian:
+// - Intermediate: 45% - 70% (distribusi berdasarkan kedalaman penggunaan)
+// - Beginner: 15% - 30% (distribusi berdasarkan tingkat pemula)
+export const SKILLS_DATA: SkillCategory[] = [
   {
-    category: "Frontend Development",
-    skills: ["React.js", "TypeScript", "JavaScript", "Tailwind CSS", "Shadcn/ui", "DaisyUI", "Framer Motion", "HTML5 & CSS3"],
-    gradient: "from-blue-500 to-indigo-500"
+    category: "Frontend",
+    gradient: "from-blue-500 to-indigo-500",
+    accentColor: "#6366f1",
+    skills: [
+      { name: "React.js", percentage: 68 },
+      { name: "TypeScript", percentage: 55 },
+      { name: "JavaScript", percentage: 45 },
+      { name: "Tailwind CSS", percentage: 75 },
+      { name: "HTML/CSS", percentage: 90 },
+      { name: "Shadcn/ui", percentage: 87 },
+      { name: "DaisyUI", percentage: 90 },
+      { name: "Framer Motion", percentage: 32 },
+      { name: "Anime.js", percentage: 11 },
+    ]
   },
   {
-    category: "Backend & Systems",
-    skills: ["PHP", "Laravel", "Inertia.js", "MySQL (Basic CRUD & Queries)"],
-    gradient: "from-emerald-500 to-teal-500"
+    category: "Backend",
+    gradient: "from-emerald-500 to-teal-500",
+    accentColor: "#10b981",
+    skills: [
+      { name: "PHP", percentage: 35 },
+      { name: "Laravel", percentage: 34 },
+      { name: "Inertia.js", percentage: 32 },
+      { name: "MySQL", percentage: 22 },
+    ]
   },
   {
-    category: "Tools, Design & Creative",
-    skills: ["Git & GitHub", "Postman (API)", "Figma & Framer (UI/UX)", "Blender (3D)", "Anime.js", "AI-Assisted Tools"],
-    gradient: "from-purple-500 to-pink-500"
+    category: "Tools & Creative",
+    gradient: "from-purple-500 to-pink-500",
+    accentColor: "#a855f7",
+    skills: [
+      { name: "Git/GitHub", percentage: 43 },
+      { name: "Postman", percentage: 27 },
+      { name: "Figma", percentage: 6 },
+      { name: "Framer", percentage: 6 },
+      { name: "Blender 3D", percentage: 46 },
+      { name: "Unity", percentage: 17 },
+      { name: "CAD", percentage: 2 },
+      { name: "AI Tools", percentage: 95 },
+    ]
   }
-] as const;
+];
 
 // 5. Data Tech Stack dengan Persentase Tingkat Keahlian (Dipindahkan dari TechstackSection)
 export const TECH_STACK_DATA = [

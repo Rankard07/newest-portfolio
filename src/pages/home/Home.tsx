@@ -13,7 +13,7 @@ export default function Home() {
       }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="container mx-auto px-6 py-12 space-y-2 max-w-6xl overflow-x-visible bg-amber-700"
+      className="container mx-auto px-6 py-12 space-y-4 max-w-6xl overflow-x-visible"
     >
       <HeroSection />
       <SectionDivider label="About Me" />

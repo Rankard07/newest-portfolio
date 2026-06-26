@@ -4,13 +4,13 @@ import { TECH_STACK_DATA } from "@/config/HomeConfig";
 
 export default function TechstackSection() {
   return (
-    <section className="py-6 space-y-8">
-      <div className="text-center space-y-2">
-        {/* <h2 className="text-3xl font-bold font-heading">Tech Stack</h2> */}
+    <section className="py-10 space-y-8">
+      {/* <div className="text-center space-y-2">
+        <h2 className="text-3xl font-bold font-heading">Tech Stack</h2>
         <p className="text-muted-foreground max-w-md mx-auto">
           A preview of my primary stack and expertise level for projects.
         </p>
-      </div>
+      </div> */}
 
       <div className="flex flex-wrap items-center justify-center gap-6 max-w-4xl mx-auto">
         {TECH_STACK_DATA.map((tech) => (

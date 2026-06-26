@@ -55,7 +55,7 @@ function FloatingCard({ title, subtext, icon, className, delay = 1.3, duration =
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 py-4 md:py-6 gap-12 min-h-[60vh] bg-purple-600">
+    <section className="relative flex flex-col md:flex-row items-center justify-between px-4 py-4 md:py-6 gap-12 min-h-[60vh]">
       {/* Decorative Blur Backgrounds */}
       <div className="absolute top-10 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute bottom-10 right-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl -z-10" />
@@ -65,7 +65,7 @@ export default function HeroSection() {
         initial={{ x: -50, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.1, duration: 0.5 }}
-        className="flex-1 space-y-6 bg-blue-400"
+        className="flex-1 space-y-6"
       >
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs font-mono text-primary">
           <Terminal size={14} />
@@ -144,7 +144,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Right Section - Terminal and Floating Cards */}
-      <div className="flex-1 w-full max-w-md relative py-6 bg-red-400">
+      <div className="flex-1 w-full max-w-md relative py-6 ">
         {/* Floating Card 1: Frontend (JavaScript) */}
         <FloatingCard
           title="JavaScript"

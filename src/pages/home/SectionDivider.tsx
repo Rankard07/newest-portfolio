@@ -26,7 +26,7 @@ export default function SectionDivider({ label }: SectionDividerProps) {
       initial="rest"
       whileHover="hover"
       animate="rest"
-      className="flex items-center justify-center w-full py-4 overflow-hidden select-none group cursor-default"
+      className="flex items-center justify-center w-full py-8 overflow-hidden select-none group cursor-default"
     >
       {/* Left Line: animates outwards from center to left */}
       <motion.div
