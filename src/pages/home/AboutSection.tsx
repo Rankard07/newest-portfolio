@@ -1,4 +1,4 @@
-import { motion } from "motion/react";
+import { motion, easeOut } from "motion/react";
 import { Code2, Palette, Layers, Sparkles } from "lucide-react";
 
 // ============================================
@@ -45,7 +45,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5, ease: easeOut },
   },
 };
 
@@ -55,7 +55,7 @@ const cardVariants = {
     opacity: 1,
     scale: 1,
     y: 0,
-    transition: { duration: 0.45, ease: "easeOut" },
+    transition: { duration: 0.45, ease: easeOut },
   },
 };
 
